@@ -5,6 +5,9 @@ import 'package:news_app/utils/app_colors.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 class CategoryFragment extends StatelessWidget {
+  Function onViewAllClicked ;
+
+  CategoryFragment({required this.onViewAllClicked});
   //var categoriesList = CategoryModel.getCategoriesList(true);
   List <CategoryModel> categoriesList = [];
   @override
@@ -58,8 +61,9 @@ class CategoryFragment extends StatelessWidget {
                         totalSwitches: 2,
                         radiusStyle: true,
                         animate: true,
-                        onToggle: (index) {
+                        onToggle: (index1) {
                           print('switched to: $index');
+                          onViewAllClicked(categoriesList[index]);
                         },
                       ),
                     ),

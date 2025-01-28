@@ -1,22 +1,23 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/api/api_manager.dart';
+import 'package:news_app/model/category_Model.dart';
 import 'package:news_app/model/source_Response.dart';
 import 'package:news_app/ui/home/category/source_Tab_Widget.dart';
 import 'package:news_app/utils/app_colors.dart';
 
 class CategoryDetails extends StatefulWidget {
   static const String routeName = "categoryDetails";
-
+  CategoryModel category;
+  CategoryDetails({required this.category});
   @override
   State<CategoryDetails> createState() => _CategoryDetailsState();
 }
-
 class _CategoryDetailsState extends State<CategoryDetails> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<SourceResponse?>(
-        future: ApiManager.getSources(),
+        future: ApiManager.getSources(widget.category.id),
         builder: (context, snapshot) {
           //todo : loading
           if (snapshot.connectionState == ConnectionState.waiting) {
@@ -35,7 +36,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
                   ),
                   ElevatedButton(
                       onPressed: () {
-                        ApiManager.getSources();
+                        ApiManager.getSources(widget.category.id);
                         setState(() {});
                       },
                       child: Text("Try again"))
@@ -56,7 +57,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
                   ),
                   ElevatedButton(
                       onPressed: () {
-                        ApiManager.getSources();
+                        ApiManager.getSources(widget.category.id);
                         setState(() {});
                       },
                       child: Text("Try again"))
