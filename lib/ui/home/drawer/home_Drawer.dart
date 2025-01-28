@@ -5,7 +5,9 @@ import 'package:news_app/utils/app_colors.dart';
 import 'package:news_app/utils/app_styles.dart';
 import 'package:news_app/utils/assets_manager.dart';
 
-class SectionDrawer extends StatelessWidget {
+class HomeDrawer extends StatelessWidget {
+  Function onDrawerItemClicked ;
+  HomeDrawer ({required this.onDrawerItemClicked});
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -28,6 +30,7 @@ class SectionDrawer extends StatelessWidget {
         InkWell(
           onTap: (){
             // todo: go to home
+            onDrawerItemClicked();
           },
           child: SectionDrawerItem(
             imagePath: AssetsManager.homeIcon,
