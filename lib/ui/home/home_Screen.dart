@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget{
         backgroundColor: AppColors.blackColor,
         child: SectionDrawer(),
       ),
-      body :CategoryDetails(),
+      body :CategoryFragment(),
     );
   }
 }
