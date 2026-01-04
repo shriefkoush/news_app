@@ -4,6 +4,7 @@ import 'package:news_app/utils/app_colors.dart';
 import 'package:news_app/utils/app_styles.dart';
 
 class AppTheme {
+
   static final ThemeData lightTheme = ThemeData(
     indicatorColor: AppColors.blackColor,
     primaryColor: AppColors.whiteColor,
@@ -20,7 +21,7 @@ class AppTheme {
       headlineLarge: AppStyles.medium20black,
         headlineMedium: AppStyles.medium24black
 
-    )
+    ),
   );
 
   static final ThemeData darkTheme = ThemeData(
@@ -38,6 +39,6 @@ class AppTheme {
       headlineLarge: AppStyles.medium20white,
       headlineMedium: AppStyles.medium24white
 
-  )
+  ),
   );
 }

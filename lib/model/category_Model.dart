@@ -12,49 +12,49 @@ class CategoryModel {
       CategoryModel(
         id: 'general',
         title: 'General',
-        imagePath: !isDark?
-             AssetsManager.generalLightImage
-            : AssetsManager.generalDarkImage,
+        imagePath: isDark?
+        AssetsManager.generalLightImage:
+        AssetsManager.generalDarkImage,
       ),
       CategoryModel(
         id: 'business',
         title: 'Business',
-        imagePath: !isDark
+        imagePath: isDark
             ? AssetsManager.businessLightImage
             : AssetsManager.businessDarkImage,
       ),
       CategoryModel(
         id: 'sports',
         title: 'Sports',
-        imagePath: !isDark
+        imagePath: isDark
             ? AssetsManager.sportsLightImage
             : AssetsManager.sportsDarkImage,
       ),
       CategoryModel(
         id: 'technology',
         title: 'Technology',
-        imagePath: !isDark
+        imagePath: isDark
             ? AssetsManager.technologyLightImage
             : AssetsManager.technologyDarkImage,
       ),
       CategoryModel(
         id: 'entertainment',
         title: 'Entertainment',
-        imagePath: !isDark
+        imagePath: isDark
             ? AssetsManager.entertainmentLightImage
             : AssetsManager.entertainmentDarkImage,
       ),
       CategoryModel(
         id: 'health',
         title: 'Health',
-        imagePath: !isDark
+        imagePath: isDark
             ? AssetsManager.healthLightImage
             : AssetsManager.healthDarktImage,
       ),
       CategoryModel(
         id: 'science',
         title: 'Science',
-        imagePath: !isDark
+        imagePath: isDark
             ? AssetsManager.scinceLightImage
             : AssetsManager.scinceDarkImage,
       ),

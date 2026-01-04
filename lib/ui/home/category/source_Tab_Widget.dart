@@ -25,11 +25,10 @@ class _SourceTabWidgetState extends State<SourceTabWidget> {
             TabBar(
                 dividerColor: AppColors.transparentColor,
               onTap: (index){
-                selectedIndex = index;
                 setState(() {
-
+                  selectedIndex = index;
                 });
-              },
+                },
               indicatorColor: Theme.of(context).indicatorColor,
               tabAlignment: TabAlignment.start,
               isScrollable:true ,

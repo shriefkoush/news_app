@@ -6,7 +6,7 @@ import 'package:news_app/model/newsResponse.dart';
 import 'package:news_app/model/source_Response.dart';
 
 class ApiManager {
-  static Future<SourceResponse?> getSources(String categoryId) async {
+   Future<SourceResponse?> getSources(String categoryId ) async {
     Uri url = Uri.https(
       ApiConstants.baseUrl,
       EndPoints.sourceApi,
@@ -39,16 +39,33 @@ class ApiManager {
     }
   }
 
-  static Future<NewsResponse?> getNewsBySourceId(String sourceId)async{
+   Future<NewsResponse?> getNewsBySourceId(String sourceId,int page)async{
     //https://newsapi.org/v2/everything?q=bitcoin&apiKey=1298eefcf3444399a2c69c1fd3dc3fd3
     Uri url =Uri.https(ApiConstants.baseUrl,EndPoints.newsApi,{
       "apiKey" : ApiConstants.apikey,
-      "sources" : sourceId
+      "sources" : sourceId,
+      "pageSize" : "10",
+      "page" : "$page"
     });
     try{
-      var responce = await http.get(url);
-      var responceBody = responce.body;
-      var json = jsonDecode(responceBody);
+      var response = await http.get(url);
+      var responseBody = response.body;
+      var json = jsonDecode(responseBody);
+      return NewsResponse.fromJson(json);
+    }catch (e){
+      throw e ;
+    }
+  }
+  static Future<NewsResponse?> searchNews(String query)async{
+    //https://newsapi.org/v2/everything?q=bitcoin&apiKey=1298eefcf3444399a2c69c1fd3dc3fd3
+    Uri url =Uri.https(ApiConstants.baseUrl,EndPoints.newsApi,{
+      "apiKey" : ApiConstants.apikey,
+      "q" : query,
+    });
+    try{
+      var response = await http.get(url);
+      var responseBody = response.body;
+      var json = jsonDecode(responseBody);
       return NewsResponse.fromJson(json);
     }catch (e){
       throw e ;

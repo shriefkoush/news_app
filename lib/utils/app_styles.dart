@@ -13,7 +13,7 @@ class AppStyles {
       fontSize: 14,fontWeight: FontWeight.w500,color: AppColors.whiteColor
   );
   static TextStyle medium14black = GoogleFonts.inter(
-      fontSize: 14,fontWeight: FontWeight.w500,color: AppColors.blackColor
+      fontSize: 14,fontWeight: FontWeight.w600,color: AppColors.blackColor
   );
   static TextStyle medium20black = GoogleFonts.inter(
       fontSize: 20,fontWeight: FontWeight.w500,color: AppColors.blackColor
@@ -32,6 +32,12 @@ class AppStyles {
   );
   static TextStyle bold16black = GoogleFonts.inter(
       fontSize: 16,fontWeight: FontWeight.bold,color: AppColors.blackColor
+  );
+  static TextStyle bold20black = GoogleFonts.inter(
+      fontSize: 20,fontWeight: FontWeight.bold,color: AppColors.blackColor
+  );
+  static TextStyle bold22black = GoogleFonts.inter(
+      fontSize: 22,fontWeight: FontWeight.bold,color: AppColors.blackColor
   );
   static TextStyle bold24black = GoogleFonts.inter(
       fontSize: 24,fontWeight: FontWeight.bold,color: AppColors.blackColor

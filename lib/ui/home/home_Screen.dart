@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/model/category_Model.dart';
+import 'package:news_app/search/search_Delegate.dart';
 import 'package:news_app/ui/home/category/category_Details.dart';
 import 'package:news_app/ui/home/category/category_Fragment.dart';
 import 'package:news_app/ui/home/drawer/home_Drawer.dart';
@@ -19,7 +20,12 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title:
-        Text( selectedCategory == null ?"Home"  : selectedCategory!.title ,style: Theme.of(context).textTheme.headlineLarge,),
+        Text( selectedCategory == null ?"Home"  : selectedCategory!.title
+          ,style: Theme.of(context).textTheme.headlineLarge),
+        actions: [IconButton(onPressed: ()=> showSearch(context: context,
+            delegate: NewsSearchDelegate()) ,
+            icon: Icon(Icons.search,size: 30,
+            ))],
       ),
       drawer: Drawer(
         backgroundColor: AppColors.blackColor,

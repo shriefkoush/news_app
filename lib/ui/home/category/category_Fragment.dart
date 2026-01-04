@@ -8,18 +8,18 @@ class CategoryFragment extends StatelessWidget {
   Function onViewAllClicked ;
 
   CategoryFragment({required this.onViewAllClicked});
-  //var categoriesList = CategoryModel.getCategoriesList(true);
-  List <CategoryModel> categoriesList = [];
+  var categoriesList = CategoryModel.getCategoriesList(true);
+ // List <CategoryModel> categoriesList = [];
   @override
   Widget build(BuildContext context) {
-    categoriesList = CategoryModel.getCategoriesList(false);
+   // categoriesList = CategoryModel.getCategoriesList(true);
     var height =MediaQuery.of(context).size.height;
     var width =MediaQuery.of(context).size.width;
     return Container(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text(" Good Morning\n Here is Some News For You",style:
+          Text(" Hello 👋🏻\n Here is Some News For You",style:
             Theme.of(context).textTheme.headlineMedium,),
           SizedBox(height: height*0.01,),
           Expanded(child: ListView.separated(
