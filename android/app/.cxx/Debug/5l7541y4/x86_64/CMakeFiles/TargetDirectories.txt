@@ -1,0 +1,2 @@
+F:/c.data P 15-1-2025/news_app/android/app/.cxx/Debug/5l7541y4/x86_64/CMakeFiles/edit_cache.dir
+F:/c.data P 15-1-2025/news_app/android/app/.cxx/Debug/5l7541y4/x86_64/CMakeFiles/rebuild_cache.dir
