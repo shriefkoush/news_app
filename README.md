@@ -7,8 +7,8 @@ A Flutter-based News application that fetches real-time news from multiple sourc
 ## 📸 Screenshots
 
 <p float="left">
- <img src="home.jpg (2).jpg" width="200"/>
-<img src="news_list.jpg.jpg" width="200"/>
+<img src="home.jpg%20(2).jpg" width="200"/>
+ <img src="news_list.jpg.jpg" width="200"/>
 </p>
 
 ---
